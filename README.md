@@ -5,7 +5,7 @@ var Bounceable = require("react-native-bouceable");
 
 render() {
   return <Bounceable
-            onPress={()=>console.log("Pressed!"}
+            onPress={()=>console.log("Pressed!")}
             level={1.1}>
             <View>
               <Text>Click Me!</Text>
