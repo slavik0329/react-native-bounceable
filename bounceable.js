@@ -46,21 +46,22 @@ module.exports = React.createClass({
 
           if ( gestureState.dy > moveTolerance ||  gestureState.dy < (-moveTolerance) || gestureState.dx > moveTolerance ||  gestureState.dx < (-moveTolerance)) {
           } else {
-            if ( this.props.onPress ) {
-              setTimeout( () => { // 50ms delay makes it more natural
-                this.props.onPress(); 
-              }, 50);
-            }
-          }
+            setTimeout( () => { // 50ms delay makes it more natural
 
-          Animated.spring(         
-            this.state.scale,    
-            {
-              toValue: 1,
-              friction:1,
-              duration: 200
-            },           
-          ).start();  
+              Animated.spring(         
+                this.state.scale,    
+                {
+                  toValue: 1,
+                  friction:1,
+                  duration: 200
+                },           
+              ).start(); 
+
+              if ( this.props.onPress ) {
+                this.props.onPress(); 
+              }
+            }, 50);
+          } 
         },
 
       });  
