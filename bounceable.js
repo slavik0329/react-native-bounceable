@@ -2,7 +2,7 @@
 
 var React = require('react-native');
 
-const moveTolerance = 30;
+const moveTolerance = 30; // Amount of movement before it is no longer a press
 
 var {
   Animated,
@@ -11,14 +11,17 @@ var {
 } = React;
 
 module.exports = React.createClass({
-  getInitialState() {
-      return {
-        scale: new Animated.Value(1)
-      };
+  propTypes: {
+      level: React.PropTypes.number.isRequired // Maximum scale of animation
   },
   getDefaultProps() {
       return {
           level: 1.1  
+      };
+  },
+  getInitialState() {
+      return {
+        scale: new Animated.Value(1)
       };
   },
   _panResponder: {},
