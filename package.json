@@ -15,6 +15,7 @@
     "ios",
     "android",
     "animation",
-    "bounce"
+    "bounce",
+    "button"
   ]
 }
