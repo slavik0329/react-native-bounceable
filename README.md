@@ -20,7 +20,11 @@ render() {
   return <Bounceable
             onPress={()=>console.log("Pressed!")}
             level={1.1}>
-            <View>
+            <View
+              style={{
+                width: 100,
+                padding:8
+              }}>
               <Text>Click Me!</Text>
             </View>
   </Bounceable>
