@@ -34,6 +34,7 @@ module.exports = React.createClass({
         onPanResponderTerminationRequest: (evt, gestureState) => true,
         onPanResponderTerminate: (evt, gestureState) => {
         },
+        
         onPanResponderGrant: (evt, gestureState) => { 
           Animated.timing(         
             this.state.scale,    
@@ -46,11 +47,10 @@ module.exports = React.createClass({
         },
 
         onPanResponderRelease: (evt, gestureState) => {
-
           if ( gestureState.dy > moveTolerance ||  gestureState.dy < (-moveTolerance) || gestureState.dx > moveTolerance ||  gestureState.dx < (-moveTolerance)) {
+            // Do nothing 
           } else {
-            setTimeout( () => { // 50ms delay makes it more natural
-
+            setTimeout( () => { // 50ms delay makes press response more natural
               Animated.spring(         
                 this.state.scale,    
                 {
@@ -65,8 +65,7 @@ module.exports = React.createClass({
               }
             }, 50);
           } 
-        },
-
+        }
       });  
   },
   render: function() {
