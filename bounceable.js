@@ -12,7 +12,8 @@ var {
 
 module.exports = React.createClass({
   propTypes: {
-      level: React.PropTypes.number.isRequired // Maximum scale of animation
+      onPress: React.PropTypes.func, //Optional function to be excecuted after succesful press
+      level: React.PropTypes.number // Maximum scale of animation
   },
   getDefaultProps() {
       return {
