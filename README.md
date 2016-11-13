@@ -14,7 +14,7 @@ npm install --save react-native-bounceable
 
 ### Example
 ```js
-var Bounceable = require("react-native-bouceable");
+import Bounceable from "react-native-bouceable";
 
 render() {
   return <Bounceable
