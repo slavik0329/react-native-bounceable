@@ -1,7 +1,7 @@
  { 
   "name": "react-native-bounceable",
   "author": "Steven Dakh <slavik0329@gmail.com> (https://github.com/slavik0329)",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "license": "MIT",
   "main": "bounceable.js",
   "repository": {
