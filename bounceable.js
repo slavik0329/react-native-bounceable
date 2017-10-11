@@ -2,13 +2,14 @@
 
 import React, {Component} from "react";
 import {Animated, PanResponder, View} from "react-native";
+import PropTypes from "prop-types";
 
 const moveTolerance = 30; // Amount of movement before it is no longer a press
 
 class Bounceable extends Component {
   static propTypes = {
-    onPress: React.PropTypes.func, //Optional function to be excecuted after succesful press
-    level: React.PropTypes.number // Maximum scale of animation
+    onPress: PropTypes.func, //Optional function to be excecuted after succesful press
+    level: PropTypes.number // Maximum scale of animation
   };
 
   static defaultProps = {
@@ -48,7 +49,7 @@ class Bounceable extends Component {
 
       onPanResponderRelease: (evt, gestureState) => {
         if (gestureState.dy > moveTolerance || gestureState.dy < (-moveTolerance) || gestureState.dx > moveTolerance || gestureState.dx < (-moveTolerance)) {
-          // Do nothing 
+          // Do nothing
         } else {
           setTimeout(() => { // 50ms delay makes press response more natural
             Animated.spring(
