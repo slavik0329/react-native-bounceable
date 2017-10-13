@@ -1,8 +1,7 @@
 'use strict';
 
-import React, {Component} from "react";
+import React, {Component, PropTypes} from "react";
 import {Animated, PanResponder, View} from "react-native";
-import PropTypes from "prop-types";
 
 const moveTolerance = 30; // Amount of movement before it is no longer a press
 
