@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 
 const moveTolerance = 30; // Amount of movement before it is no longer a press
 
-class Bounceable extends Component {
+export default class Bounceable extends Component {
   static propTypes = {
     onPress: PropTypes.func, //Optional function to be excecuted after succesful press
     level: PropTypes.number // Maximum scale of animation
@@ -91,5 +91,3 @@ class Bounceable extends Component {
     );
   }
 }
-
-module.exports = Bounceable;
